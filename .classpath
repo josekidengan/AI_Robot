@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/codesize-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/picocontainer-2.14.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/robocode.battle-1.9.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/robocode.core-1.9.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/robocode.host-1.9.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/robocode.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/robocode.repository-1.9.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/robocode.sound-1.9.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/robocode.ui.editor-1.9.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/robocode.ui-1.9.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/josek/OneDrive/Robocode/Robo/libs/roborumble.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
