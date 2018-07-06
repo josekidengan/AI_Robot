@@ -1,0 +1,8 @@
+/target/
+
+*robocode-1.9.3.2-setup.jar
+/.idea/
+/robots/
+/.config/
+/.settings/
+/robocode/

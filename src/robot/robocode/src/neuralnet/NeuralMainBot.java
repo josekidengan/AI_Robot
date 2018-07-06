@@ -11,10 +11,19 @@ public class NeuralMainBot {
 		NeuralStruct ns=new NeuralStruct();
 		ns.setReptype(reptype);
 		ns.initializeWeights();
-		ns.load();
+		//ns.load();
 		this.bb=ns;
 	}
 	
+	public static void main(String[] args) {
+		NeuralMainBot MB=new NeuralMainBot();
+		double StateAction[]= {12.0,2,5,6,};
+		MB.getQforStateAction(StateAction);
+		
+		
+	}
+	
+
 	public double getQforStateAction(double[] StateAction)
 	{
 		return bb.GetQfromNN(StateAction);

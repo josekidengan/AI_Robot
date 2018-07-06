@@ -113,9 +113,6 @@ public class MyBot extends AdvancedRobot {
 	 */
 	public void onScannedRobot(ScannedRobotEvent e) 
 	{
-
-
-		
 		if(NN)
 		{
 			if(statereductionNN)
@@ -437,9 +434,7 @@ public class MyBot extends AdvancedRobot {
 				double sin_Enemy=dimReduce_Angle(Math.sin(event.getBearing())*100);
 				double cos_Enemy=dimReduce_Angle(Math.cos(event.getBearing())*100);
 				double myX=dimReduce_Axes(getX());
-				double myY=dimReduce_Axes(getY());
-
-				
+				double myY=dimReduce_Axes(getY());				
 				double myEnergy=dimReduce_Energy(getEnergy());
 				/*state[4]=myX;
 				state[5]=myY;*/
