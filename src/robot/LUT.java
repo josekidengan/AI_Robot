@@ -10,10 +10,12 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Random;
 
 public class LUT {
 	ArrayList<double[]> ActionList=new ArrayList<double[]>();
+	HashMap<String,double[]> actionList =new HashMap<>();
 	ArrayList<double[]> LUT=new ArrayList<double[]>();
 	double[] stateActionAndProbablity = new double[13];
 
@@ -25,7 +27,13 @@ public class LUT {
 		double leftforward[]={0,0,1,0,0};
 		double rightforward[]={0,0,0,1,0};
 		double back[]={0,0,0,0,1};
-		
+
+		this.actionList.put("fire",fire);
+		this.actionList.put("forward",forward);
+		this.actionList.put("leftforward",leftforward);
+		this.actionList.put("rightforward",rightforward);
+		this.actionList.put("back",back);
+
 		this.ActionList.add(fire);
 		this.ActionList.add(forward);
 		this.ActionList.add(leftforward);
