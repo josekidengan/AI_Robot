@@ -7,7 +7,7 @@ public class Config {
 	private boolean onpolicy;
 	private boolean expoloration;
 	private boolean stateReduction;
-	
+
 	public Config() {
 		this.NeuralNetSupport=true;
 	}
