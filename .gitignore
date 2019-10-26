@@ -2,7 +2,9 @@
 
 *robocode-1.9.3.2-setup.jar
 /.idea/
+/bin/
 /robots/
 /.config/
 /.settings/
 /robocode/
+*.iml

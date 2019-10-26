@@ -820,53 +820,55 @@ public class MyBot extends AdvancedRobot {
 	
 	public void onBattleEnded(BattleEndedEvent event)
 	{
+//		lut.WriteLUT();
 
 		getDataDirectory();
-		
+
 		try {
-			RobocodeFileWriter fw=new RobocodeFileWriter(getDataFile("Explore="+exploration+";Onpolicy="+onpolicy+";myBot.dat"));
-			//RobocodeFileWriter fw=new RobocodeFileWriter("C:\\Users\\josek\\OneDrive\\Robocode\\592%20project\\bin\\robot\\MyBot.data\\Win.dat");
-			
-			
-		
+			RobocodeFileWriter fw=new RobocodeFileWriter(getDataFile("res.dat"));
+//			RobocodeFileWriter fw=new RobocodeFileWriter("C:\\Users\\josek\\OneDrive\\Robocode\\592%20project\\bin\\robot\\MyBot.data\\Win.dat");
+
+
+
 			//RobocodeFileWriter fw=new RobocodeFileWriter(getDataFile("Explore="+exploration+";Onpolicy="+onpolicy+";myBot.dat"));
-			for(int u=0;u<plotbattle_Sucess_Count.size();u++)
-			{
-				fw.write((u+1)+" | "+plotbattle_Sucess_Count.get(u)+"\n");				
+			for(double[] key :lut.SAP.keySet()){
+				fw.write(Arrays.toString(key)+"|"+lut.SAP.get(key)+"\n");
 			}
-			fw.close();	
-			
-		} 
+
+//			for(int u=0;u<plotbattle_Sucess_Count.size();u++)
+//			{
+//				fw.write((u+1)+" | "+plotbattle_Sucess_Count.get(u)+"\n");
+//			}
+			fw.close();
+
+		}
 
 		catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-		}finally
-		{
-			
-		}		
-		
-		//out.print( "Total Data left:"+getDataQuotaAvailable());
-				try {
-					RobocodeFileWriter fcw=new RobocodeFileWriter(getDataFile("Explore="+exploration+";Onpolicy="+onpolicy+";PredictionError.dat"));
-					
-					for(int u=0;u<PredictionError.size();u++)
-					{
-						fcw.write((u+1)+" | "+PredictionError.get(u)+"\n");
-						
-					}
-					fcw.close();
-					
-					
-				} 
-
-				catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}finally
-				{
-					
-				}			
+		}
+//
+//		//out.print( "Total Data left:"+getDataQuotaAvailable());
+//				try {
+//					RobocodeFileWriter fcw=new RobocodeFileWriter(getDataFile("Explore="+exploration+";Onpolicy="+onpolicy+";PredictionError.dat"));
+//
+//					for(int u=0;u<PredictionError.size();u++)
+//					{
+//						fcw.write((u+1)+" | "+PredictionError.get(u)+"\n");
+//
+//					}
+//					fcw.close();
+//
+//
+//				}
+//
+//				catch (IOException e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				}finally
+//				{
+//
+//				}
 		//out.print( "Total Data left:"+getDataQuotaAvailable());
 /*		try {
 			RobocodeFileWriter fcw=new RobocodeFileWriter(getDataFile("Explore="+exploration+";Onpolicy="+onpolicy+";QEpizode.dat"));
@@ -910,9 +912,9 @@ public class MyBot extends AdvancedRobot {
 		{
 			
 		}	*/
-		WriterDouble db=new WriterDouble(Q_Epizodes);
-		WriterInt in=new WriterInt(plotbattle_Sucess_Count);
-		lut.WriteLUT();
+//		WriterDouble db=new WriterDouble(Q_Epizodes);
+//		WriterInt in=new WriterInt(plotbattle_Sucess_Count);
+//		lut.WriteLUT();
 		//out.print( "Total Data left:"+getDataQuotaAvailable());
 	}
 	private void takeAction(double [] action,ScannedRobotEvent e)
