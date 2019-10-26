@@ -8,3 +8,5 @@
 /.settings/
 /robocode/
 *.iml
+.project
+.classpath
